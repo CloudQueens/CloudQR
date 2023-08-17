@@ -6,6 +6,9 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan"
 import kpiRoutes from "./routes/kpi.js";
+import productRoutes from "./routes/product.js";
+import Product from "./models/KPI.js";
+
 
 dotenv.config();
 
@@ -20,6 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 app.use("/kpi", kpiRoutes);
+app.use("/product", productRoutes)
+
 
 const PORT = process.env.PORT || 9000;
 
