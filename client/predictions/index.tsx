@@ -1,1 +1,1 @@
-import react from react;
+import DashboardBox from "@/components/DashboardBox";
