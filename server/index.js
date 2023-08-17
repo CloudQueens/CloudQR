@@ -5,7 +5,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan"
-import bluebird from "bluebird";
 import kpiRoutes from "./routes/kpi.js";
 
 dotenv.config();
@@ -24,12 +23,10 @@ app.use("/kpi", kpiRoutes);
 
 const PORT = process.env.PORT || 9000;
 
-mongoose.Promise = bluebird;
-
 mongoose
   .connect(process.env.MONGO_URL, {
-    useMongoClient: true,
-   
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => {
     app.listen(PORT, () => {
