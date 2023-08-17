@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "rechart": "^0.0.1",
-    "redux": "^4.2.1"
+    "redux": "^4.2.1",
+    "regression": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/regression": "^2.0.2"
   }
 }
