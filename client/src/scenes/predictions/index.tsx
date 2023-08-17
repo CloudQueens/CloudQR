@@ -53,11 +53,11 @@ const Predictions = () => {
           </Typography>
         </Box>
         <Button
-          onClick={() => setIsPredictions(!isPredictions)}
-          sx={{
-            color: palette.grey[900],
-            backgroundColor: palette.grey[700],
-            boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4)",
+        onClick={() => setIsPredictions(!isPredictions)}
+        sx={{
+        color: palette.grey[900],
+        backgroundColor: palette.grey[700],
+        boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4)",
           }}
         >
           Show Predicted Revenue for Next Year
@@ -67,10 +67,10 @@ const Predictions = () => {
         <LineChart
           data={formattedData}
           margin={{
-            top: 20,
-            right: 75,
-            left: 20,
-            bottom: 80,
+          top: 20,
+          right: 75,
+          left: 20,
+          bottom: 80,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke={palette.grey[800]} />
