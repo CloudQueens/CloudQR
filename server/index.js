@@ -23,6 +23,20 @@ dotenv.config(); //loads environmenent
 
 const app = express(); //initializes instance of the express application to define routes, middleware, and start the serverr
 
+
+
+//MODELS IMPORTED FOR DATABASE DROP
+// import KPI from "./models/KPI.js"; 
+// import Product from "./models/Product.js";
+// import Transaction from "./models/Transaction.js";
+
+//DATA IMPORTED FROM data.js FILE FOR INITIAL COMMIT
+// import { kpis, products, transactions } from "./data/data.js";
+
+dotenv.config(); //loads environmenent
+
+const app = express(); //initializes instance of the express application to define routes, middleware, and start the serverr
+
 //configure express
 app.use(express.json());
 app.use(helmet());
@@ -39,18 +53,22 @@ app.use("/transaction", transactionRoutes);
 
 const PORT = process.env.PORT || 9000;
 
+// mongoose.Promise = global.Promise;
+
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(async () => {
+  
     app.listen(PORT, () => console.log(`MongoDB is running......Server is Running on: http://localhost:${PORT}`));
       //Drop the database for the initial commit to MONGODB    
       // await mongoose.connection.db.dropDatabase();
       // KPI.insertMany(kpis);
       // Product.insertMany(products);
       // Transaction.insertMany(transactions);
+  
     })
   .catch((error) => {
     console.error("MongoDB connection error:", error.message);
