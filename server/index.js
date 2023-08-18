@@ -31,16 +31,21 @@ app.use("/transaction", transactionRoutes);
 
 const PORT = process.env.PORT || 9000;
 
+// mongoose.Promise = global.Promise;
+
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`MongoDB is running.....Server is running on port ${PORT}`);
-    });
-  })
+  .then(async () => {
+    app.listen(PORT, () => console.log(`MongoDB is running......Server is Running on: ${PORT}`));
+         
+      await mongoose.connection.db.dropDatabase();
+      KPI.insertMany(kpis);
+      Product.insertMany(products);
+      Transaction.insertMany(transactions);
+    })
   .catch((error) => {
     console.error("MongoDB connection error:", error.message);
   });
