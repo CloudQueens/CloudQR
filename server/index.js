@@ -23,20 +23,6 @@ dotenv.config(); //loads environmenent
 
 const app = express(); //initializes instance of the express application to define routes, middleware, and start the serverr
 
-
-
-//MODELS IMPORTED FOR DATABASE DROP
-// import KPI from "./models/KPI.js"; 
-// import Product from "./models/Product.js";
-// import Transaction from "./models/Transaction.js";
-
-//DATA IMPORTED FROM data.js FILE FOR INITIAL COMMIT
-// import { kpis, products, transactions } from "./data/data.js";
-
-dotenv.config(); //loads environmenent
-
-const app = express(); //initializes instance of the express application to define routes, middleware, and start the serverr
-
 //configure express
 app.use(express.json());
 app.use(helmet());
