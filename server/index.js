@@ -11,10 +11,16 @@ import kpiRoutes from "./routes/kpi.js";
 import productRoutes from "./routes/product.js";
 import transactionRoutes from "./routes/transaction.js";
 
+
 //MODELS IMPORTED FOR DATABASE DROP
 // import KPI from "./models/KPI.js"; 
 // import Product from "./models/Product.js";
 // import Transaction from "./models/Transaction.js";
+
+import KPI from "./models/KPI.js";
+import Product from "./models/Product.js";
+import Transaction from "./models/Transaction.js";
+import { kpis, products, transactions } from "./data/data.js";
 
 //DATA IMPORTED FROM data.js FILE FOR INITIAL COMMIT
 // import { kpis, products, transactions } from "./data/data.js";
@@ -39,18 +45,29 @@ app.use("/transaction", transactionRoutes);
 
 const PORT = process.env.PORT || 9000;
 
+// mongoose.Promise = global.Promise;
+
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(async () => {
+  
     app.listen(PORT, () => console.log(`MongoDB is running......Server is Running on: http://localhost:${PORT}`));
       //Drop the database for the initial commit to MONGODB    
       // await mongoose.connection.db.dropDatabase();
       // KPI.insertMany(kpis);
       // Product.insertMany(products);
       // Transaction.insertMany(transactions);
+  
+    app.listen(PORT, () => console.log(`MongoDB is running......Server is Running on: ${PORT}`));
+         
+      await mongoose.connection.db.dropDatabase();
+      KPI.insertMany(kpis);
+      Product.insertMany(products);
+      Transaction.insertMany(transactions);
+  
     })
   .catch((error) => {
     console.error("MongoDB connection error:", error.message);
