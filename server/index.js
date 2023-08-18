@@ -11,16 +11,24 @@ import kpiRoutes from "./routes/kpi.js";
 import productRoutes from "./routes/product.js";
 import transactionRoutes from "./routes/transaction.js";
 
-
 //MODELS IMPORTED FOR DATABASE DROP
 // import KPI from "./models/KPI.js"; 
 // import Product from "./models/Product.js";
 // import Transaction from "./models/Transaction.js";
 
-import KPI from "./models/KPI.js";
-import Product from "./models/Product.js";
-import Transaction from "./models/Transaction.js";
-import { kpis, products, transactions } from "./data/data.js";
+//DATA IMPORTED FROM data.js FILE FOR INITIAL COMMIT
+// import { kpis, products, transactions } from "./data/data.js";
+
+dotenv.config(); //loads environmenent
+
+const app = express(); //initializes instance of the express application to define routes, middleware, and start the serverr
+
+
+
+//MODELS IMPORTED FOR DATABASE DROP
+// import KPI from "./models/KPI.js"; 
+// import Product from "./models/Product.js";
+// import Transaction from "./models/Transaction.js";
 
 //DATA IMPORTED FROM data.js FILE FOR INITIAL COMMIT
 // import { kpis, products, transactions } from "./data/data.js";
@@ -60,13 +68,6 @@ mongoose
       // KPI.insertMany(kpis);
       // Product.insertMany(products);
       // Transaction.insertMany(transactions);
-  
-    app.listen(PORT, () => console.log(`MongoDB is running......Server is Running on: ${PORT}`));
-         
-      await mongoose.connection.db.dropDatabase();
-      KPI.insertMany(kpis);
-      Product.insertMany(products);
-      Transaction.insertMany(transactions);
   
     })
   .catch((error) => {
