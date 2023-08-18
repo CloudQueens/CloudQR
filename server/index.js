@@ -12,7 +12,7 @@ import helmet from 'helmet'; //secures app by setting headers
 
 import morgan from 'morgan'; //logs requests to the terminal
 
-//import routes
+
 
 import kpiRoutes from './routes/kpi.js';
 
@@ -35,6 +35,8 @@ import transactionRoutes from './routes/transaction.js';
 dotenv.config(); //loads environmenent
 
 const app = express(); //initializes instance of the express application to define routes, middleware, and start the serverr
+
+
 
 //configure express
 
