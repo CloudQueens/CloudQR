@@ -8,24 +8,18 @@ import morgan from 'morgan'; //logs requests to the terminal
 import kpiRoutes from './routes/kpi.js';
 import productRoutes from './routes/product.js';
 import transactionRoutes from './routes/transaction.js';
-
 //MODELS IMPORTED FOR DATABASE DROP
-
 // import KPI from "./models/KPI.js";
-
 // import Product from "./models/Product.js";
-
 // import Transaction from "./models/Transaction.js";
-
 //DATA IMPORTED FROM data.js FILE FOR INITIAL COMMIT
-
 // import { kpis, products, transactions } from "./data/data.js";
-
 dotenv.config(); //loads environmenent
 const app = express(); //initializes instance of the express application to define routes, middleware, and start the serverr
 
-//configure express
 
+
+//configure express
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
@@ -33,14 +27,11 @@ app.use(morgan('common'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-
 //mount the routes with the path and the function
-
 app.use('/kpi', kpiRoutes);
 app.use('/product', productRoutes);
 app.use('/transaction', transactionRoutes);
 const PORT = process.env.PORT || 9000;
-
 mongoose
 	.connect(process.env.MONGO_URL, {
 		useNewUrlParser: true,
