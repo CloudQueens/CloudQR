@@ -69,36 +69,36 @@ export const themeSettings = {
 		},
 	},
 	typography: {
-		fontFamily: ['Montserrat', 'sans-serif'].join(','),
+		fontFamily: ['Inter', 'sans-serif'].join(','),
 		fontSize: 12,
 		h1: {
-			fontFamily: ['Montserrat', 'sans-serif'].join(','),
+			fontFamily: ['Inter', 'sans-serif'].join(','),
 			fontSize: 32,
 		},
 		h2: {
-			fontFamily: ['Montserrat', 'sans-serif'].join(','),
+			fontFamily: ['Inter', 'sans-serif'].join(','),
 			fontSize: 24,
 		},
 		h3: {
-			fontFamily: ['Montserrat', 'sans-serif'].join(','),
+			fontFamily: ['Inter', 'sans-serif'].join(','),
 			fontSize: 20,
 			fontWeight: 800,
 			color: tokens.grey[200],
 		},
 		h4: {
-			fontFamily: ['Montserrat', 'sans-serif'].join(','),
+			fontFamily: ['Inter', 'sans-serif'].join(','),
 			fontSize: 14,
 			fontWeight: 600,
 			color: tokens.grey[300],
 		},
 		h5: {
-			fontFamily: ['Montserrat', 'sans-serif'].join(','),
+			fontFamily: ['Inter', 'sans-serif'].join(','),
 			fontSize: 12,
 			fontWeight: 400,
 			color: tokens.grey[500],
 		},
 		h6: {
-			fontFamily: ['Montserrat', 'sans-serif'].join(','),
+			fontFamily: ['Inter', 'sans-serif'].join(','),
 			fontSize: 10,
 			color: tokens.grey[700],
 		},
