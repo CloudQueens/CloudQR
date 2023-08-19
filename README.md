@@ -1,6 +1,6 @@
 # Finance Dashboard Application 
 
-Welcome to the Finance App Dashboard, a powerful tool designed to provide you with valuable insights and comprehensive financial data visualization. Whether you're an individual investor, a business owner, or a financial enthusiast, our dashboard offers a user-friendly and intuitive interface to help you make informed decisions about your financial goals.
+Welcome to the Finance App Dashboard, this dashboard provides a comprehensive overview of key financial metrics for a given period. It presents critical insights into  financial performance, displaying data such as revenue, expenses, profits, and comparisons. The interactive graphs and charts visually illustrate trends and patterns, aiding in identifying growth opportunities and empowers users to make informed decisions and steer the financial strategy effectively.
 
 ## 📦 Tech stack:
 

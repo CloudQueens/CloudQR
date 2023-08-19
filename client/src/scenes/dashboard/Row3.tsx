@@ -198,10 +198,12 @@ const Row3 = () => {
 					></Box>
 				</Box>
 				<Typography margin='0 1rem' variant='h6'>
-					Orci aliquam enim vel diam. Venenatis euismod id donec mus lorem etiam
-					ullamcorper odio sed. Ipsum non sed gravida etiam urna egestas
-					molestie volutpat et. Malesuada quis pretium aliquet lacinia ornare
-					sed. In volutpat nullam at est id cum pulvinar nunc.
+					The dashboard provides a comprehensive overview of key financial
+					metrics for a given period presenting critical insights into financial
+					performance, displaying data such as revenue, expenses & profits.
+					Interactive graphs & charts visually illustrate trends & patterns
+					identifying growth opportunities empowering users to steer financial
+					strategy effectively.
 				</Typography>
 			</DashboardBox>
 		</>
