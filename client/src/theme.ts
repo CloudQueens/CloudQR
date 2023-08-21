@@ -11,16 +11,6 @@ export const tokens = {
 		900: '#242427',
 	},
 	primary: {
-		// light green
-		// 100: '#d0fcf4',
-		// 200: '#a0f9e9',
-		// 300: '#71f5de',
-		// 400: '#41f2d3',
-		// 500: '#12efc8',
-		// 600: '#0ebfa0',
-		// 700: '#0b8f78',
-		// 800: '#076050',
-		// 900: '#043028',
 		// light blue
 		100: '#DEE5FC',
 		200: '#93ABFD',
@@ -33,16 +23,6 @@ export const tokens = {
 		900: '#806AFD',
 	},
 	secondary: {
-		// yellow
-		// 100: '#fcf0dd',
-		// 200: '#fae1bb',
-		// 300: '#f7d299',
-		// 400: '#f5c377',
-		// 500: '#f2b455',
-		// 600: '#c29044',
-		// 700: '#916c33',
-		// 800: '#614822',
-		// 900: '#302411',
 		100: '#EAFCFE',
 		200: '#9EF5FF',
 		300: '#BCCACC',
@@ -55,7 +35,6 @@ export const tokens = {
 	},
 	tertiary: {
 		// pink
-		// 500: '#8884d8',
 		500: '#FF00D4',
 	},
 	background: {
@@ -89,36 +68,36 @@ export const themeSettings = {
 		},
 	},
 	typography: {
-		fontFamily: ['Inter', 'sans-serif'].join(','),
+		fontFamily: ['Montserrat', 'sans-serif'].join(','),
 		fontSize: 12,
 		h1: {
-			fontFamily: ['Inter', 'sans-serif'].join(','),
+			fontFamily: ['Montserrat', 'sans-serif'].join(','),
 			fontSize: 32,
 		},
 		h2: {
-			fontFamily: ['Inter', 'sans-serif'].join(','),
+			fontFamily: ['Montserrat', 'sans-serif'].join(','),
 			fontSize: 24,
 		},
 		h3: {
-			fontFamily: ['Inter', 'sans-serif'].join(','),
+			fontFamily: ['Montserrat', 'sans-serif'].join(','),
 			fontSize: 20,
 			fontWeight: 800,
 			color: tokens.grey[200],
 		},
 		h4: {
-			fontFamily: ['Inter', 'sans-serif'].join(','),
+			fontFamily: ['Montserrat', 'sans-serif'].join(','),
 			fontSize: 14,
 			fontWeight: 600,
 			color: tokens.grey[300],
 		},
 		h5: {
-			fontFamily: ['Inter', 'sans-serif'].join(','),
+			fontFamily: ['Montserrat', 'sans-serif'].join(','),
 			fontSize: 12,
 			fontWeight: 400,
 			color: tokens.grey[500],
 		},
 		h6: {
-			fontFamily: ['Inter', 'sans-serif'].join(','),
+			fontFamily: ['Montserrat', 'sans-serif'].join(','),
 			fontSize: 10,
 			color: tokens.grey[700],
 		},
